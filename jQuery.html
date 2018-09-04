@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Webpage Entry
+	</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+    </script>
+</head>
+<style>
+#Question1{
+height:50px;
+}
+#Question2{
+height:50px;
+}
+#Question3{
+height:50px;
+}
+#Question4{
+height:50px;
+}
+#Question5{
+height:50px;
+}
+h1{
+	margin-left: 500px;
+	color: green;
+}
+#new{
+	margin-left: 600px;
+}
+body{
+	background-color: lavender;
+}
+</style>
+<body>
+<script>
+$(document).ready(function(){
+$("input[type='button']").click(function(){
+	var count=0;
+            var radioValueOne = $("input[name='Ques1']:checked").val();
+            if(radioValueOne==1){
+                count++;//alert("You are a -"+radioValueOne);
+            }
+            var radioValueTwo=$("input[name='Ques2']:checked").val();
+            if(radioValueTwo==3){
+            	count++;//alert("You are a -"+radioValueTwo);
+            }
+            var radioValueThree=$("input[name='Ques3']:checked").val();
+            if(radioValueThree==2){
+            	count++;//alert("You are a -"+radioValueThree);
+            }
+            var radioValueFour=$("input[name='Ques4']:checked").val();
+            if(radioValueFour==4){
+            	count++//alert("You are a -"+radioValueFour);
+            }
+            var radioValueFive=$("input[name='Ques5']:checked").val();
+            if(radioValueFive==1){
+            	count++//alert("You are a -"+radioValueFive);
+            }
+            $('#output').text(count);
+        });
+$('#toggle').click(function(){
+			$('#Question4').toggle();
+		});
+});
+</script>
+<h1> Welcome to cricket Quiz</h1>
+<div id="Question1">
+	<label> Q1) Top Run Scrorer In Test ?</label>
+	<br><br>
+	<label><input type="radio" name="Ques1" value="1">Sachin Tendulkar</label>
+	<label><input type="radio" name="Ques1" value="2">Brian Lara</label>
+	<label><input type="radio" name="Ques1" value="3">Ricky ponting</label>
+	<label><input type="radio" name="Ques1" value="4">Rahul Dravid</label>
+</div>
+<br><br>
+<div id="Question2">
+	<label> Q2) Top Wicket Taker in Test ?</label>
+	<br><br>
+	<input type="radio" name="Ques2" value="1">Glenn McGrath
+	<input type="radio" name="Ques2" value="2">Anil Kumble
+	<input type="radio" name="Ques2" value="3">Muttiah Muralitharan
+	<input type="radio" name="Ques2" value="4">Wasim Akram
+</div>
+	<br>
+	<br>
+<div id="Question3">
+	<label> Q3) Highest score in debut ODI Match by ? </label>
+	<br><br>
+	<input type="radio" name="Ques3" value="1">Andy Flower
+	<input type="radio" name="Ques3" value="2">Desmond Haynes
+	<input type="radio" name="Ques3" value="3">Dennis Amiss
+	<input type="radio" name="Ques3" value="4">Sir Viv Richards
+</div>
+	<br>
+	<br>
+<div id="Question4">
+	<label> Q4) Best bowling figures in One Day Internationals ? </label>
+	<br><br>
+	<input type="radio" name="Ques4" value="1">Rashid Khan
+	<input type="radio" name="Ques4" value="2">Shahid Afridi 
+	<input type="radio" name="Ques4" value="3">Glenn McGrath
+	<input type="radio" name="Ques4" value="4">Chaminda Vaas
+	
+</div>
+	<br>
+	<br>
+<div id="Question5">
+	<label> Q5) Best Win percetage by which team ? </label>
+	<br><br>
+	<input type="radio" name="Ques5" value="1">Australia
+	<input type="radio" name="Ques5" value="2">India
+	<input type="radio" name="Ques5"value="3">NewZeland
+	<input type="radio" name="Ques5"value="4">Pakistan
+</div>
+<br>
+<br>
+<div id="new">
+	<input type="button" value="GetValue">
+</div>
+	<br><br>
+<div>Your score:
+<h2 id="output"></h2>
+</div>
+</div>
+<button id="toggle">Toggle</button>
+</body>
+</html>
